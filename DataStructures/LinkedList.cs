@@ -89,5 +89,60 @@ namespace DataStructure
             }
             return head;
         }
+        internal void Total()
+        {
+            int Total = 0;
+            Node temp = this.head;
+            while (temp != null)
+            {
+                Total = Total + temp.data;
+                temp = temp.next;
+            }
+            Console.WriteLine("Total is: " +Total);
+
+        }
+        internal Node DeleteFirst()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            return this.head;
+        }
+
+        internal Node DeleteLast()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            if (this.head.next == null)
+            {
+                return null;
+            }
+            Node NewNode = head;
+            while (NewNode.next.next != null)
+            {
+                NewNode = NewNode.next;
+            }
+            NewNode.next = null;
+            return head;
+
+
+        }
+        internal Node SearchValueInList(int value)
+        {
+            while (this.head != null)
+            {
+                if (this.head.data == value)
+                {
+                    return this.head;
+
+                }
+                this.head = this.head.next;
+            }
+            return null;
+        }
     }
 }

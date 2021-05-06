@@ -13,6 +13,7 @@ namespace DataStructure
         static void Main(string[] args)
         {
             LinkedList list = new LinkedList();
+            LinkedListStack stack = new LinkedListStack();
             list.Add(56);
             list.Add(70);
             list.Add(90);
@@ -23,7 +24,19 @@ namespace DataStructure
             list.AddInReverseOrder(44);
             list.InsertAtParticularPosition(2, 12);
             list.Display();
-
+            list.Total();
+            list.DeleteFirst();
+            list.DeleteLast();
+            list.SearchValueInList(90);
+            stack.Push(10);
+            stack.Push(20);
+            stack.Push(30);
+            stack.Push(40);
+            stack.Push(50);
+            stack.Display();
+            stack.Peek();
+            stack.Pop();
+            stack.IsEmpty();
             Console.ReadKey();
         }
     }
