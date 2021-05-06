@@ -14,6 +14,7 @@ namespace DataStructure
         {
             LinkedList list = new LinkedList();
             LinkedListStack stack = new LinkedListStack();
+            LinkedListQueue queue = new LinkedListQueue();
             list.Add(56);
             list.Add(70);
             list.Add(90);
@@ -37,6 +38,12 @@ namespace DataStructure
             stack.Peek();
             stack.Pop();
             stack.IsEmpty();
+            queue.Enqueue(12);
+            queue.Enqueue(24);
+            queue.Enqueue(36);
+            queue.Enqueue(48);
+            queue.Dequeue();
+            queue.Display();
             Console.ReadKey();
         }
     }
